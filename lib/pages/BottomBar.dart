@@ -5,14 +5,14 @@ import 'package:assetlysis/pages/news.dart';
 import 'package:assetlysis/pages/portfolio.dart';
 import 'package:flutter/material.dart';
 
-class hme extends StatefulWidget {
-  const hme({Key? key}) : super(key: key);
+class BtmBar extends StatefulWidget {
+  const BtmBar({Key? key}) : super(key: key);
 
   @override
-  State<hme> createState() => _hmeState();
+  State<BtmBar> createState() => _BtmBar();
 }
 
-class _hmeState extends State<hme> {
+class _BtmBar extends State<BtmBar> {
   int currentIndex3 = 0;
 
   final example3 = [
@@ -26,30 +26,7 @@ class _hmeState extends State<hme> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(16),
-        alignment: Alignment.center,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            example3.elementAt(currentIndex3),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-            ),
-            /*UL(
-              children: [
-                Text('This example consists of only icons and label but only the selected item shows the label.', style: primaryTextStyle()),
-                Text('This example consists of only icons and label but only the selected item shows the label.', style: primaryTextStyle()),
-                Text('Bottom Navigation type is shifting.', style: primaryTextStyle()),
-                Text('Use when there are less than five items.', style: primaryTextStyle()),
-              ],
-            ),*/
-          ],
-        ),
-      ),
+      body: example3[currentIndex3],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int index) {
             setState(() {

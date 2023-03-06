@@ -10,8 +10,7 @@ class MainHomePage extends StatefulWidget {
 class _MainHomePageState extends State<MainHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.blueGrey,
               iconTheme: const IconThemeData(color: Colors.blueGrey),
@@ -139,7 +138,6 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
             ]),
-          ),
       );
   }
 }
