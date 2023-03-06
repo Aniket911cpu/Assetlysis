@@ -10,20 +10,24 @@ class MainHomePage extends StatefulWidget {
 class _MainHomePageState extends State<MainHomePage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return DefaultTabController(  // Added
+      length: 6,  // Added
+      initialIndex: 0, //Added
+      child: Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.blueGrey,
               iconTheme: const IconThemeData(color: Colors.blueGrey),
               title: const Text(
-                'TabBar with Title and Icon',
+                'Markets',
               ),
               bottom: TabBar(
                 onTap: (index) {
                   print(index);
                 },
+                isScrollable: true,
                 indicatorColor: Colors.blue,
                 physics: const BouncingScrollPhysics(),
-                labelColor: Colors.blueGrey,
+                labelColor: Colors.white,
                 tabs: [
                   Tab(
                     child: Row(
@@ -36,7 +40,7 @@ class _MainHomePageState extends State<MainHomePage> {
                           color: Colors.blueGrey,
                         ),
                         Text(
-                          'Home',
+                          'Overview',
                         ),
                       ],
                     ),
@@ -52,7 +56,7 @@ class _MainHomePageState extends State<MainHomePage> {
                           color: Colors.blueGrey,
                         ),
                         Text(
-                          'Article',
+                          'Indices',
                         ),
                       ],
                     ),
@@ -68,7 +72,55 @@ class _MainHomePageState extends State<MainHomePage> {
                           color: Colors.blueGrey,
                         ),
                         Text(
-                          'User',
+                          'Commodities',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Tab(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Icon(
+                          Icons.insert_drive_file,
+                          color: Colors.blueGrey,
+                        ),
+                        Text(
+                          'Stocks',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Tab(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Icon(
+                          Icons.insert_drive_file,
+                          color: Colors.blueGrey,
+                        ),
+                        Text(
+                          'Currencies',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Tab(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Icon(
+                          Icons.insert_drive_file,
+                          color: Colors.blueGrey,
+                        ),
+                        Text(
+                          'Cryptocurrency',
                         ),
                       ],
                     ),
@@ -138,6 +190,7 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
             ]),
-      );
+      ),
+    );
   }
 }
