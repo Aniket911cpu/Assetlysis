@@ -150,7 +150,7 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 alignment: Alignment.center,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
